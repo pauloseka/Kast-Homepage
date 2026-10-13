@@ -137,7 +137,7 @@ export function Reserve() {
   );
   const [currency, setCurrency] =
     useState<(typeof reserve.currencies)[number]["id"]>("USD");
-  const [usd, setUsd] = useState(reserve.defaultBalance);
+  const [usd, setUsd] = useState<number>(reserve.defaultBalance);
   const [draft, setDraft] = useState(() => formatAmount(reserve.defaultBalance));
   const [phase, setPhase] = useState<VaultPhase>("ready");
   const balanceRef = useRef<HTMLInputElement>(null);
